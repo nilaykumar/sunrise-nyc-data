@@ -15,8 +15,9 @@ maintainers = [
 dependencies = [
   "pip-tools",
   "pre-commit",
-  "ruff==v0.0.262", # pin to version in .pre-commit-config.yaml
-  "black==23.1.0", # pin to version in .pre-commit-config.yaml
+  "ruff",
+  "black",
+  "meltano",
 ]
 
 # dynamic = ["version", "description"]
@@ -26,3 +27,6 @@ homepage = "https://www.sunrise-nyc.org"
 # documentation = "https://readthedocs.org"
 # repository = "https://github.com/me/spam.git"
 # changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
+
+[tool.setuptools]
+packages = ["sunrise_nyc_data"]

@@ -7,6 +7,15 @@ This repository houses the data stack for Sunrise NYC.
 
 ## installation
 
+- set up python3.10 venv with pip-tools
+- pip-sync from requirements.txt
+- place slack api token in the meltano/.env
+- docker run postgres container
+  docker run -p 5432:5432 -e POSTGRES_USER=meltano -e POSTGRES_PASSWORD=password -d postgres
+- make sure that the target-postgres settings match up with the user/pass set
+- give it a few seconds to start up
+
+
 ## usage
 
 ## todo
