@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+  workflow_dispatch:
+
+jobs:
+
+  lint:
+    runs-on: ubunutu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Test workflows
+        run: pwd && echo 'Hello, world!'
