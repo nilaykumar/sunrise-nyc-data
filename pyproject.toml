@@ -1,0 +1,28 @@
+[project]
+name = "sunrise-nyc-data"
+version = "0.1.0"
+description = "Data stack for Sunrise NYC"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Nilay Kumar", email = "nilaykumar@tutanota.com"},
+]
+maintainers = [
+  {name = "Nilay Kumar", email = "nilaykumar@tutanota.com"},
+]
+
+dependencies = [
+  "pip-tools",
+  "pre-commit",
+  "ruff==v0.0.262", # pin to version in .pre-commit-config.yaml
+  "black==23.1.0", # pin to version in .pre-commit-config.yaml
+]
+
+# dynamic = ["version", "description"]
+
+[project.urls]
+homepage = "https://www.sunrise-nyc.org"
+# documentation = "https://readthedocs.org"
+# repository = "https://github.com/me/spam.git"
+# changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
