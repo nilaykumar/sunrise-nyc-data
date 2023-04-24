@@ -14,6 +14,8 @@ This repository houses the data stack for Sunrise NYC.
   docker run -p 5432:5432 -e POSTGRES_USER=meltano -e POSTGRES_PASSWORD=password -d postgres
 - make sure that the target-postgres settings match up with the user/pass set
 - give it a few seconds to start up
+- cd meltano
+  meltano run tap-slack target-postgres
 
 
 ## usage
@@ -21,3 +23,6 @@ This repository houses the data stack for Sunrise NYC.
 ## todo
 
 - Determine licensing: which and how
+- set up docker compose to:
+  - spin up postgres container
+  - run meltano elt

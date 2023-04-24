@@ -1,0 +1,24 @@
+version: 1
+default_environment: dev
+project_id: 231dcf75-379c-48e8-a13d-8b0228dc4b96
+environments:
+- name: dev
+- name: staging
+- name: prod
+plugins:
+  extractors:
+  - name: tap-slack
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/tap-slack.git
+    config:
+      start_date: '2023-04-01'
+  loaders:
+  - name: target-postgres
+    variant: transferwise
+    pip_url: pipelinewise-target-postgres
+    config:
+      host: localhost
+      port: 5432
+      user: meltano
+      dbname: postgres
+      add_metadata_columns: true
